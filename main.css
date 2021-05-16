@@ -56,7 +56,8 @@ input {
   border-style: solid;
   border-color: #fdebbe;
   color: #fdebbe;
-  --button-hover: #fdebbe; /* remove water.css hover style */
+  --button-hover: #fdebbe;
+  /* remove water.css hover style */
 }
 
 button:hover,
@@ -64,4 +65,16 @@ input:hover {
   color: #000;
   background-color: #fdebbe;
   border-color: #000000;
+}
+
+a {
+  background-color: #fdebbe;
+  padding-left: 0.15em;
+  padding-right: 0.15em;
+  color: #000;
+  border-radius: 2px;
+}
+footer {
+  margin-bottom: 5px;
+  color: #fdebbe;
 }
