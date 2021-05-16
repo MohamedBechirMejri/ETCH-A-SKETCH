@@ -13,6 +13,15 @@ body {
   background-color: #a01632;
 }
 
+h1 {
+  font-family: "Cabin Sketch", cursive;
+  color: #fdebbe;
+}
+
+span {
+  font-size: 0.5em;
+}
+
 #sketch-area {
   background-color: #e0e1e2;
   width: 80%;
@@ -25,7 +34,7 @@ body {
   justify-content: space-between;
   width: 85%;
   align-items: center;
-  margin-top: 1.5%;
+  margin-top: 3%;
 }
 
 #buttons {
@@ -35,7 +44,24 @@ body {
 
 .knobs {
   background-color: #e0e1e2;
-  width: 7em;
-  height: 7em;
+  width: 13vh;
+  height: 13vh;
   border-radius: 50%;
+  box-shadow: 0 0 1em;
+}
+
+button,
+input {
+  background-color: #a01632;
+  border-style: solid;
+  border-color: #fdebbe;
+  color: #fdebbe;
+  --button-hover: #fdebbe; /* remove water.css hover style */
+}
+
+button:hover,
+input:hover {
+  color: #000;
+  background-color: #fdebbe;
+  border-color: #000000;
 }
