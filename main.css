@@ -18,3 +18,24 @@ body {
   width: 80%;
   height: 70%;
 }
+
+#knobs-and-buttons {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 85%;
+  align-items: center;
+  margin-top: 1.5%;
+}
+
+#buttons {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.knobs {
+  background-color: #e0e1e2;
+  width: 7em;
+  height: 7em;
+  border-radius: 50%;
+}
