@@ -1,10 +1,10 @@
 let numOfSquares = 16;
-let sketchArea = document.getElementById("sketch-area");
-let chosenColor = document.getElementById("chosen-color");
+const sketchArea = document.getElementById("sketch-area");
+const chosenColor = document.getElementById("chosen-color");
 
 function createSquares() {
   for (let i = 0; i < numOfSquares * numOfSquares; i++) {
-    let square = document.createElement("div");
+    const square = document.createElement("div");
     square.addEventListener(
       "mouseover",
       () => (square.style.backgroundColor = chosenColor.value)
@@ -16,10 +16,11 @@ function createSquares() {
 }
 createSquares();
 
-let resetButton = document.getElementById("reset");
-let numOfSquaresButton = document.getElementById("number-of-squares");
+const resetButton = document.getElementById("reset");
+const numOfSquaresButton = document.getElementById("number-of-squares");
 
-sketchArea.addEventListener("transitionend", () =>  // TODO fix this
+sketchArea.addEventListener("transitionend", () =>
+  // TODO fix this
   sketchArea.classList.remove("shaken")
 );
 
