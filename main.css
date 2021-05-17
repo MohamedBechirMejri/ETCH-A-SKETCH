@@ -2,6 +2,7 @@ body {
   margin: 0px;
   padding: 0px;
   background-color: #a01632;
+  overflow: hidden; /* Hide scrollbars */
 }
 
 #container {
@@ -95,38 +96,31 @@ footer {
 }
 
 .shaken {
-  animation: headShake 0.5s;
-  transition: 0.5s;
+  animation: shakeY 0.5s;
+  transition: All;
 }
 
-@keyframes headShake {
-  0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
+@keyframes shakeY {
+ from,
+ to {
+   -webkit-transform: translate3d(0, 0, 0);
+   transform: translate3d(0, 0, 0);
+ }
 
-  6.5% {
-    -webkit-transform: translateX(-6px) rotateY(-9deg);
-    transform: translateX(-6px) rotateY(-9deg);
-  }
+ 10%,
+ 30%,
+ 50%,
+ 70%,
+ 90% {
+   -webkit-transform: translate3d(0, -10px, 0);
+   transform: translate3d(0, -10px, 0);
+ }
 
-  18.5% {
-    -webkit-transform: translateX(5px) rotateY(7deg);
-    transform: translateX(5px) rotateY(7deg);
-  }
-
-  31.5% {
-    -webkit-transform: translateX(-3px) rotateY(-5deg);
-    transform: translateX(-3px) rotateY(-5deg);
-  }
-
-  43.5% {
-    -webkit-transform: translateX(2px) rotateY(3deg);
-    transform: translateX(2px) rotateY(3deg);
-  }
-
-  50% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
+ 20%,
+ 40%,
+ 60%,
+ 80% {
+   -webkit-transform: translate3d(0, 10px, 0);
+   transform: translate3d(0, 10px, 0);
+ }
 }
