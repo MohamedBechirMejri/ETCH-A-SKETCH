@@ -5,6 +5,9 @@ const resetButton = document.getElementById("reset");
 const numOfSquaresButton = document.getElementById("number-of-squares");
 
 function createSquares() {
+  sketchArea.style.gridTemplateColumns = `repeat(${numOfSquares}, 1fr)`;
+  sketchArea.style.gridTemplateRows = `repeat(${numOfSquares}, 1fr)`;
+
   for (let i = 0; i < numOfSquares * numOfSquares; i++) {
     const square = document.createElement("div");
 
@@ -12,12 +15,8 @@ function createSquares() {
       "mouseover",
       () => (square.style.backgroundColor = chosenColor.value)
     );
-
     sketchArea.appendChild(square);
   }
-
-  sketchArea.style.gridTemplateColumns = `repeat(${numOfSquares}, 1fr)`;
-  sketchArea.style.gridTemplateRows = `repeat(${numOfSquares}, 1fr)`;
 }
 
 sketchArea.addEventListener("transitionend", () =>
@@ -28,7 +27,6 @@ sketchArea.addEventListener("transitionend", () =>
 resetButton.addEventListener("click", () => {
   sketchArea.classList.toggle("shaken");
   sketchArea.innerHTML = "";
-
   createSquares();
 });
 
