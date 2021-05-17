@@ -31,4 +31,10 @@ resetButton.addEventListener("click", () => {
   createSquares();
 });
 
+numOfSquaresButton.addEventListener("click", () => {
+  numOfSquares = prompt("Enter Number of Squares", 16);
+  sketchArea.innerHTML = "";
+  createSquares();
+});
+
 createSquares();
