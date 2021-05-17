@@ -27,6 +27,10 @@ span {
   width: 80%;
   height: 70%;
   display: grid;
+  border-style: solid;
+  border-radius: 20px;
+  border-color: #000;
+  overflow: hidden;
 }
 
 #knobs-and-buttons {
@@ -49,6 +53,8 @@ span {
   height: 13vh;
   border-radius: 50%;
   box-shadow: 0 0 1em;
+  border-style: solid;
+  border-color: rgb(196, 196, 196);
 }
 
 button,
@@ -88,7 +94,7 @@ footer {
 }
 
 .shaken {
-  animation: shakeX 0.5s ;
+  animation: shakeX 0.5s;
   transition: 0.5s;
 }
 
