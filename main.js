@@ -27,7 +27,8 @@ function reset() {
 }
 
 function changeSquareNum() {
-  numOfSquares = prompt("Enter Number of Squares", 16);
+  numOfSquares = prompt("Enter Number of Squares (Max 100).", 16);
+  numOfSquares > 100 ? (numOfSquares = 100) : "";
   sketchArea.innerHTML = "";
   createSquares();
 }
