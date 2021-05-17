@@ -124,3 +124,6 @@ footer {
     transform: translate3d(0, 10px, 0);
   }
 }
+.smooth {
+  transition: all 0.15s;
+}
