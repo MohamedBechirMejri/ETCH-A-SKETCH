@@ -12,6 +12,7 @@ function createSquares() {
   for (let i = 0; i < numOfSquares * numOfSquares; i++) {
     const square = document.createElement("div");
 
+    square.classList.add("smooth");
     square.addEventListener(
       "mouseover",
       () => (square.style.backgroundColor = chosenColor.value)
@@ -20,21 +21,25 @@ function createSquares() {
   }
 }
 
-sketchArea.addEventListener("transitionend", () =>
-  // TODO fix this
-  container.classList.toggle("shaken")
-);
-
-resetButton.addEventListener("click", () => {
-  container.classList.toggle("shaken");
+function reset() {
   sketchArea.innerHTML = "";
   createSquares();
-});
+}
 
-numOfSquaresButton.addEventListener("click", () => {
+function changeSquareNum() {
   numOfSquares = prompt("Enter Number of Squares", 16);
   sketchArea.innerHTML = "";
   createSquares();
+}
+container.addEventListener("transitionend", () => {
+  container.classList.remove("shaken");
 });
+
+resetButton.addEventListener("click", () => {
+  container.classList.add("shaken");
+  setTimeout(reset, 450); //sync shaking with reset
+});
+
+numOfSquaresButton.addEventListener("click", changeSquareNum);
 
 createSquares();
